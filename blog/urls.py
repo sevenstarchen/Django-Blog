@@ -21,7 +21,7 @@ urlpatterns = [
     path('', views.index),
     # path('/article/(?P<article_id>[0-9]+)/', views.article_page),#使用正则表达式匹配的数字以article_id作为组名去匹配 python3不支持该写法
     path('article/<int:article_id>/', views.article_page, name='article_page'),
-    path('edit/', views.edit_page,name='edit_page'),
+    path('edit/<int:article_id>/', views.edit_page,name='edit_page'),
     path('edit/action', views.edit_action,name='edit_action'),
 ]
 app_name = 'blog'
